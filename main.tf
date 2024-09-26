@@ -12,9 +12,8 @@ resource "google_compute_instance" "nginx_instance" {
   machine_type = var.environment_machine_type[var.target_environment]
   labels = {
     environment = var.environment_map[var.target_environment]
-  }REDISREDIS
-  tags = var.compute-source-tags 
-         04_06_qa
+  }
+  tags = var.compute-source-tags
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
